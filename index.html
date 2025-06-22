@@ -23,6 +23,10 @@
       padding: 20px;
       margin-top: 40px;
     }
+    .note {
+      font-size: 0.9em;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -40,81 +44,77 @@
     <button class="btn btn-primary" onclick="showTab('ios')">🍏 iOS</button>
   </div>
 
-  <div class="row" id="androidTab">
-    <!-- Sản phẩm Android -->
-  </div>
-
-  <div class="row d-none" id="iosTab">
-    <!-- Sản phẩm iOS -->
-  </div>
+  <div class="row" id="androidTab"></div>
+  <div class="row d-none" id="iosTab"></div>
 </div>
 
 <footer>
-  <p>Liên hệ Zalo: 0342508951 | Facebock : Bế HoàngLong</p>
+  <p>Liên hệ Zalo: 0342508951 | Facebock : Bê Hoàng Long</p>
   <p>&copy; 2025 hotrokeotampro.com</p>
 </footer>
 
 <script>
-function showTab(platform) {
-  document.getElementById("androidTab").classList.add("d-none");
-  document.getElementById("iosTab").classList.add("d-none");
-  if (platform === 'android') {
-    document.getElementById("androidTab").classList.remove("d-none");
-  } else {
-    document.getElementById("iosTab").classList.remove("d-none");
-  }
-}
-
-function renderProducts(tabId, products, color) {
-  const container = document.getElementById(tabId);
-  products.forEach(([name, desc, link]) => {
-    const div = document.createElement("div");
-    div.className = "col-md-4";
-    div.innerHTML = `
-      <div class="card product-card">
-        <div class="card-body">
-          <h5 class="card-title">${name}</h5>
-          <p class="card-text">${desc}</p>
-          <p class="fw-bold text-${color}">Free</p>
-          <a href="${link}" class="btn btn-${color}">Tải ngay</a>
-          <p class="text-muted small mt-2">* Vượt link để nhận file</p>
-        </div>
-      </div>
-    `;
-    container.appendChild(div);
-  });
-}
-
-window.onload = function () {
   const androidProducts = [
-    ["AIMLOCK V1", "File hỗ trợ FF thường", "https://link4sub.com/y7eN"],
-    ["AIMLOCK V2", "Bám đầu mạnh hơn", "https://link4sub.com/FSmU"],
-    ["AIMLOCK V3", "Chống lệch tâm", "https://link4sub.com/lWT1"],
-    ["AIMLOCK V4", "Headshot auto", "https://link4sub.com/arBO"],
-    ["AIMLOCK V5", "Thi đấu cực nhạy", "https://link4sub.com/un8A"],
-    ["AIMLOCK V6", "Ver mới nhất", "https://link4sub.com/LWvr"],
-    ["Nhẹ Tâm V1", "Dành cho máy yếu", "https://link4sub.com/4UhP"],
-    ["ZerdGun", "Siêu nhẹ & ổn định", "https://link4sub.com/bTyL"],
-    ["HeadTrick", "Tự động headshot", "https://link4sub.com/oouE"],
-    ["HeadLock", "Siêu bám đầu", "https://link4sub.com/D70R"]
+    ["AIMLOCK V1", "File hỗ trợ FF thường", "https://link4m.com/6iG5HY"],
+    ["AIMLOCK V2", "Bám đầu mạnh hơn", "https://link4m.com/h1KnK4i"],
+    ["AIMLOCK V3", "Chống lệch tâm", "https://link4m.com/WX72tt"],
+    ["AIMLOCK V4", "Headshot auto", "https://link4m.com/0SPmY4"],
+    ["AIMLOCK V5", "Thi đấu cực nhạy", "https://link4m.com/MjRWXOe"],
+    ["AIMLOCK V6", "Ver mới nhất", "https://link4m.com/UGOSi9k"],
+    ["Nhẹ Tâm V1", "Dành cho máy yếu", "https://link4m.com/UvQq6"],
+    ["ZerdGun", "Siêu nhẹ & ổn định", "https://link4m.com/wY4Od4M"],
+    ["HeadTrick", "Tự động headshot", "https://link4m.com/ftA1YCuj"],
+    ["HeadLock", "Siêu bám đầu", "https://link4m.com/s8Nvn35s"]
   ];
 
   const iosProducts = [
-    ["AimLock Plus V1", "mobileconfig chuẩn", "https://link4sub.com/Ey5Y"],
-    ["AimLock Plus V2", "Chứng chỉ crt", "https://link4sub.com/pwbO"],
-    ["ConFig Vip", "Cấu hình tối ưu", "https://link4sub.com/8J7H"],
-    ["Optimize Config", "Tối ưu ổn định", "https://link4sub.com/PPk3"],
-    ["Configuration PEES", "Tăng tốc phản hồi", "https://link4sub.com/rgsb"],
-    ["DPI SUPPER Ver2", "Tăng DPI siêu nhạy", "https://link4sub.com/7H6m"],
-    ["Dpi Supper 1.1.2", "Nhẹ và ổn định", "https://link4sub.com/1Cpr"],
-    ["Sensilimidted", "mobileconfig tối ưu", "https://link4sub.com/bbhd"],
-    ["Sensilimited Config", "Nhẹ tâm iOS", "https://link4sub.com/R7Aj"],
+    ["AimLock Plus V1", "mobileconfig chuẩn", "https://link4m.com/5jVddwPG"],
+    ["AimLock Plus V2", "Chứng chỉ crt", "https://link4m.com/UqOqa"],
+    ["ConFig Vip", "Cấu hình tối ưu", "https://link4m.com/tKTC9m"],
+    ["Optimize Config", "Tối ưu ổn định", "https://link4m.com/IPG7uQ"],
+    ["Configuration PEES", "Tăng tốc phản hồi", "https://link4m.com/Grbte"],
+    ["DPI SUPPER Ver2", "Tăng DPI siêu nhạy", "https://link4m.com/FCEldR"],
+    ["Dpi Supper 1.1.2", "Nhẹ và ổn định", "https://link4m.com/zcROanre"],
+    ["Sensilimidted", "mobileconfig tối ưu", "https://link4m.com/4SK1ntL"],
+    ["Sensilimited Config", "Nhẹ tâm iOS", "https://link4m.com/NSATZC"],
     ["Khóm Limited", "Chứng chỉ game nhạy", "https://link4m.com/l8sG3"]
   ];
 
-  renderProducts("androidTab", androidProducts, "success");
-  renderProducts("iosTab", iosProducts, "primary");
-};
+  function showTab(platform) {
+    document.getElementById("androidTab").classList.add("d-none");
+    document.getElementById("iosTab").classList.add("d-none");
+    if (platform === 'android') {
+      document.getElementById("androidTab").classList.remove("d-none");
+    } else {
+      document.getElementById("iosTab").classList.remove("d-none");
+    }
+  }
+
+  function renderProducts(tabId, products, color) {
+    const container = document.getElementById(tabId);
+    container.innerHTML = '';
+    products.forEach(([name, desc, link]) => {
+      const div = document.createElement("div");
+      div.className = "col-md-4";
+      div.innerHTML = `
+        <div class="card product-card">
+          <div class="card-body">
+            <h5 class="card-title">${name}</h5>
+            <p class="card-text">${desc}</p>
+            <p class="fw-bold text-${color}">Miễn phí</p>
+            <a href="${link}" class="btn btn-${color}" target="_blank">Vượt link để nhận file</a>
+            <p class="note">* Bạn cần vượt link (link4m) để nhận file tải về</p>
+          </div>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  window.onload = function () {
+    renderProducts("androidTab", androidProducts, "success");
+    renderProducts("iosTab", iosProducts, "primary");
+  };
 </script>
 
 </body>

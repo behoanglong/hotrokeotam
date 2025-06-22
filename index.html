@@ -41,45 +41,16 @@
   </div>
 
   <div class="row" id="androidTab">
-    <!-- Android Sản phẩm -->
-    <!-- Bạn có thể sao chép dòng dưới và thay thông tin nếu cần thêm -->
-    <script>
-      const androidProducts = [
-        ["AIMLOCK V1", "File hỗ trợ FF thường", "20.000đ", "https://www.mediafire.com/file/g4qoc9nm648yldh/AIMLOCK_V1.so/file"],
-        ["AIMLOCK V2", "Bám đầu mạnh hơn", "50.000đ", "https://www.mediafire.com/file/r2c5t9e4aubkgso/AIMLOCK__V2.so/file"],
-        ["AIMLOCK V3", "Chống lệch tâm", "80.000đ", "https://www.mediafire.com/file/bkzxn04d9wtrc78/AIMLOCK_V3.so/file"],
-        ["AIMLOCK V4", "Headshot auto", "100.000đ", "https://www.mediafire.com/file/6m1kibmsp2qxjpl/AIMLOCK_V4.so/file"],
-        ["AIMLOCK V5", "Thi đấu cực nhạy", "150.000đ", "https://www.mediafire.com/file/bfaal00pmdkcqyj/AIMLOCK_V5.so/file"],
-        ["AIMLOCK V6", "Ver mới nhất", "200.000đ", "https://www.mediafire.com/file/1b9hz2zt8gvddo1/AIMLOCK_V6.so/file"],
-        ["Nhẹ Tâm V1", "Dành cho máy yếu", "70.000đ", "https://www.mediafire.com/file/s8lvfa771xzwwnv/Nh%E1%BA%B9_T%C3%A2m_V1.conf/file"],
-        ["ZerdGun", "Siêu nhẹ & ổn định", "120.000đ", "https://www.mediafire.com/file/czuqazlwdhrmxqh/ZerdGun.so/file"],
-        ["HeadTrick", "Tự động headshot", "70.000đ", "https://www.mediafire.com/file/gex1mcri508ygfo/Supper_HeadTrick%F0%9F%94%B0.conf/file"],
-        ["HeadLock", "Siêu bám đầu", "100.000đ", "https://www.mediafire.com/file/lhqh3x0gkqimxx3/Supper_HeadLock%F0%9F%92%8C.so/file"]
-      ];
-    </script>
+    <!-- Sản phẩm Android -->
   </div>
 
   <div class="row d-none" id="iosTab">
-    <!-- iOS Sản phẩm -->
-    <script>
-      const iosProducts = [
-        ["AimLock Plus V1", "mobileconfig chuẩn", "50.000đ", "https://www.mediafire.com/file/wjs6223z799m4o8/AimLock_Plus_V1.mobileconfig/file"],
-        ["AimLock Plus V2", "Chứng chỉ crt", "70.000đ", "https://www.mediafire.com/file/mcn22itmphziwb3/AimLock_Plus_V2.crt/file"],
-        ["ConFig Vip", "Cấu hình tối ưu", "90.000đ", "https://www.mediafire.com/file/k9a38rkkdxllk5e/ConFig_Vip.mobileconfig/file"],
-        ["Optimize Config", "Tối ưu ổn định", "120.000đ", "https://www.mediafire.com/file/nmqds7gbcqtalli/ConfignarutionOR_optimize.mobileconfig/file"],
-        ["Configuration PEES", "Tăng tốc phản hồi", "150.000đ", "https://www.mediafire.com/file/a6dbzrav8c3h7d4/CONFIGNORA%CC%89TIONPEES.accessibilityPunctuationGroup/file"],
-        ["DPI SUPPER Ver2", "Tăng DPI siêu nhạy", "200.000đ", "https://www.mediafire.com/file/2w622jramo6otia/DPI_SUPPER_Ver2.xml/file"],
-        ["Dpi Supper 1.1.2", "Nhẹ và ổn định", "70.000đ", "https://www.mediafire.com/file/sswcuika8wsztm6/Dpi_Supper_1.1.2/file"],
-        ["Sensilimidted", "mobileconfig tối ưu", "120.000đ", "https://www.mediafire.com/file/hiwvs4ar3u8qevo/Sensilimidted.mobileconfig/file"],
-        ["Sensilimited Config", "Nhẹ tâm iOS", "70.000đ", "https://www.mediafire.com/file/oz0mr48l6mu297r/Sensilimited_Configuration.mobileconfig/file"],
-        ["Khóm Limited", "Chứng chỉ game nhạy", "100.000đ", "https://www.mediafire.com/file/sdv0tmhmm6y2rdv/Kho%CC%81m_Limidted.crt/file"]
-      ];
-    </script>
+    <!-- Sản phẩm iOS -->
   </div>
 </div>
 
 <footer>
-  <p>Liên hệ Zalo: 09xxxxxxxx | STK MB Bank: 0335008361 - MA THI HIEN</p>
+  <p>Liên hệ Zalo: 0342508951 | Facebock : Bế HoàngLong</p>
   <p>&copy; 2025 hotrokeotampro.com</p>
 </footer>
 
@@ -96,7 +67,7 @@ function showTab(platform) {
 
 function renderProducts(tabId, products, color) {
   const container = document.getElementById(tabId);
-  products.forEach(([name, desc, price, link]) => {
+  products.forEach(([name, desc, link]) => {
     const div = document.createElement("div");
     div.className = "col-md-4";
     div.innerHTML = `
@@ -104,8 +75,9 @@ function renderProducts(tabId, products, color) {
         <div class="card-body">
           <h5 class="card-title">${name}</h5>
           <p class="card-text">${desc}</p>
-          <p class="fw-bold text-${color}">${price}</p>
+          <p class="fw-bold text-${color}">Free</p>
           <a href="${link}" class="btn btn-${color}">Tải ngay</a>
+          <p class="text-muted small mt-2">* Vượt link để nhận file</p>
         </div>
       </div>
     `;
@@ -114,6 +86,32 @@ function renderProducts(tabId, products, color) {
 }
 
 window.onload = function () {
+  const androidProducts = [
+    ["AIMLOCK V1", "File hỗ trợ FF thường", "https://link4sub.com/y7eN"],
+    ["AIMLOCK V2", "Bám đầu mạnh hơn", "https://link4sub.com/FSmU"],
+    ["AIMLOCK V3", "Chống lệch tâm", "https://link4sub.com/lWT1"],
+    ["AIMLOCK V4", "Headshot auto", "https://link4sub.com/arBO"],
+    ["AIMLOCK V5", "Thi đấu cực nhạy", "https://link4sub.com/un8A"],
+    ["AIMLOCK V6", "Ver mới nhất", "https://link4sub.com/LWvr"],
+    ["Nhẹ Tâm V1", "Dành cho máy yếu", "https://link4sub.com/4UhP"],
+    ["ZerdGun", "Siêu nhẹ & ổn định", "https://link4sub.com/bTyL"],
+    ["HeadTrick", "Tự động headshot", "https://link4sub.com/oouE"],
+    ["HeadLock", "Siêu bám đầu", "https://link4sub.com/D70R"]
+  ];
+
+  const iosProducts = [
+    ["AimLock Plus V1", "mobileconfig chuẩn", "https://link4sub.com/Ey5Y"],
+    ["AimLock Plus V2", "Chứng chỉ crt", "https://link4sub.com/pwbO"],
+    ["ConFig Vip", "Cấu hình tối ưu", "https://link4sub.com/8J7H"],
+    ["Optimize Config", "Tối ưu ổn định", "https://link4sub.com/PPk3"],
+    ["Configuration PEES", "Tăng tốc phản hồi", "https://link4sub.com/rgsb"],
+    ["DPI SUPPER Ver2", "Tăng DPI siêu nhạy", "https://link4sub.com/7H6m"],
+    ["Dpi Supper 1.1.2", "Nhẹ và ổn định", "https://link4sub.com/1Cpr"],
+    ["Sensilimidted", "mobileconfig tối ưu", "https://link4sub.com/bbhd"],
+    ["Sensilimited Config", "Nhẹ tâm iOS", "https://link4sub.com/R7Aj"],
+    ["Khóm Limited", "Chứng chỉ game nhạy", "https://link4m.com/l8sG3"]
+  ];
+
   renderProducts("androidTab", androidProducts, "success");
   renderProducts("iosTab", iosProducts, "primary");
 };
